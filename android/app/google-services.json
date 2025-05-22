@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "425200153710",
+    "project_id": "daily-planner-4a99c",
+    "storage_bucket": "daily-planner-4a99c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425200153710:android:2681eae3aa48c03308627f",
+        "android_client_info": {
+          "package_name": "com.baseflow.permissionhandler.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdxG4NPEvbTydhX4n4mIQSnglElXGf37c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

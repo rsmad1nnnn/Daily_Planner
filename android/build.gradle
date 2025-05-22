@@ -1,0 +1,13 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Заменим на более совместимую с Java 17 версию
+        classpath 'com.android.tools.build:gradle:8.1.0'  // Используй версию 7.4.0 или 7.3.0
+        // Если будет использоваться Kotlin:
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
