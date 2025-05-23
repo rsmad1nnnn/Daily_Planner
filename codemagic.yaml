@@ -7,26 +7,17 @@ workflows:
     scripts:
       - name: Install dependencies
         script: flutter pub get
-      - name: Build for iOS simulator manually
+      - name: Build for iOS simulator (x86_64)
         script: |
           flutter clean
           flutter pub get
 
-          # Подготовка Xcode-проекта
-          flutter build ios --debug || true
+          flutter build ios --debug --simulator
 
-          # Ручная сборка с архитектурой симулятора
-          xcodebuild -workspace ios/Runner.xcworkspace \
-            -scheme Runner \
-            -configuration Debug \
-            -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath build/ios/sim_build
+          # Проверяем содержимое
+          ls -la build/ios/iphonesimulator/
 
-          # Копирование .app
-          mkdir -p build/ios/iphonesimulator/
-          cp -R build/ios/sim_build/Build/Products/Debug-iphonesimulator/Runner.app build/ios/iphonesimulator/
-
-          # Архивация
+          # Упаковываем Runner.app в ZIP
           mkdir -p build/ios/ipa
           zip -r build/ios/ipa/Runner.app.zip build/ios/iphonesimulator/Runner.app
     artifacts:
