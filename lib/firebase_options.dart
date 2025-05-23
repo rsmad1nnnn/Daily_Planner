@@ -66,4 +66,14 @@ class DefaultFirebaseOptions {
     projectId: 'daily-planner-4a99c',
     storageBucket: 'daily-planner-4a99c.firebasestorage.app',
   );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyC57gPRI48XT7R1qtggB60AqUbLYmDStLg',
+    appId: '1:425200153710:ios:01fbeb97f0d88e8208627f',
+    messagingSenderId: '425200153710',
+    projectId: 'daily-planner-4a99c',
+    storageBucket: 'daily-planner-4a99c.firebasestorage.app',
+    iosClientId: '425200153710-xxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com',
+    iosBundleId: 'com.baseflow.permissionhandler.dailyPlanner',
+  );
 }
