@@ -9,15 +9,11 @@ workflows:
         script: flutter pub get
       - name: Build for iOS simulator (x86_64)
         script: |
-          flutter clean
-          flutter pub get
+          flutter build ios --simulator
 
-          flutter build ios --debug --simulator
-
-          # Проверяем содержимое
+          echo "Содержимое build/ios/iphonesimulator/:"
           ls -la build/ios/iphonesimulator/
 
-          # Упаковываем Runner.app в ZIP
           mkdir -p build/ios/ipa
           zip -r build/ios/ipa/Runner.app.zip build/ios/iphonesimulator/Runner.app
     artifacts:
