@@ -41,13 +41,13 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
 
   # http requests
-#  dio: ^5.5.0+1
+  # dio: ^5.5.0+1
 
   # handle ask for perms
   permission_handler: ^11.3.1
 
   # localization
-  intl: ^0.19.0
+  intl: ^0.20.2
 
   # get firebase plugins and docs from https://firebase.flutter.dev/
 
